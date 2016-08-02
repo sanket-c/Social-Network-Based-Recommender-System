@@ -5,9 +5,13 @@ A Recommender System that makes use of friendship relations in a social network 
 Tools/Libraries:
 ----------------------------------------------------------------
 Apache SPARK
+
 SparkSQL
+
 R library caTools
+
 scipy
+
 numpy
 
 ----------------------------------------------------------------
