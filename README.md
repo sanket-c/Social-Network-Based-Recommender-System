@@ -33,20 +33,35 @@ The folder structure should look like this:--
 Folder structure:
 
 SNRS
+
 -- src
+
 ---- train.py
+
 ---- test.py 
+
 -- csvs
+
 ---- (csv files....)
+
 -- Scripts
+
 ---- pre_process.py
+
 ---- split.R
+
 -- pickles
+
 ---- (pickle files....)
+
 -- Dataset
+
 ---- user.json
+
 ---- business.json
+
 ---- review.json
+
 
 -----------------------------------------------------------------
 Preprocessing instructions:
@@ -64,7 +79,7 @@ Execution Instructions:
 -----------------------------------------------------------------
 1) cd to the directory SNRS/
 
-2) Run pyspark: 'IPYTHON=1 /home/akhil/apache-spark/spark-1.5.2-bin-hadoop2.6/bin/pyspark --packages com.databricks:spark-csv_2.10:1.3.0'
+2) Run pyspark: 'IPYTHON=1 /home/sanket/apache-spark/spark-1.5.2-bin-hadoop2.6/bin/pyspark --packages com.databricks:spark-csv_2.10:1.3.0'
 
 3) Run the training: execfile('src/train.py')
 
@@ -74,7 +89,13 @@ Execution Instructions:
 
 NOTES:
 1) Execution takes a lot of time. Intermediate calculates are stored in python pickle formats
-2) The filtered dataset and created pickles for tempe can be found here: 
+
+2) The filtered dataset and created pickles for 'Tempe' can be found here: 
+
+a) pickles/naive.pickle 
+b) pickles/b_users.pickle
+c) pickles/rating_matrix_final.pickle
+
 3) If the algorithm should be run for a different city, run pre_process.py with the city name and delete the following files:
 
 a) pickles/naive.pickle 
